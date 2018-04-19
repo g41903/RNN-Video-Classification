@@ -1,0 +1,8 @@
+Testing Epoch: 149 Iter: 18000, correct: 38 ,accuracy: 9.313725490196079
+test_train
+Testing Epoch: 149 Iter: 24000, correct: 37 ,accuracy: 9.068627450980392
+Saved model to ./models1.1/saved_model/task1_1_5500000.h5
+test_train
+Testing Epoch: 149 Iter: 30000, correct: 34 ,accuracy: 8.333333333333332
+test_train
+Testing Epoch: 149 Iter: 36000, correct: 37 ,accuracy: 9.068627450980392

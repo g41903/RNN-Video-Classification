@@ -9,9 +9,9 @@ class ClassificationNet(nn.Module):
     def __init__(self):
         super(ClassificationNet, self).__init__()
         class_num = 51
-        self.fc1 = nn.Linear(512, 256)
-        self.fc2 = nn.Linear(256, 128)
-        self.fc3 = nn.Linear(128, class_num)
+        self.fc1 = nn.Linear(512, 128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, class_num)
 
 
     def forward(self, x):
