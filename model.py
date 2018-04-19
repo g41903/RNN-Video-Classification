@@ -9,12 +9,14 @@ class ClassificationNet(nn.Module):
     def __init__(self):
         super(ClassificationNet, self).__init__()
         class_num = 51
-        self.fc1 = nn.Linear(512*10,512)
-        self.fc2 = nn.Linear(512, 256)
-        self.fc3 = nn.Linear(256, class_num)
+        self.fc1 = nn.Linear(512, 256)
+        self.fc2 = nn.Linear(256, 128)
+        self.fc3 = nn.Linear(128, class_num)
 
 
     def forward(self, x):
+        if x.data.shape[0] != 512:
+            print("Shape is not correct")
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
